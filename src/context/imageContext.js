@@ -10,7 +10,7 @@ export const ImageProvider = ({children}) => {
       ]);
 
     return (
-        <ImageContext.Provider value={{images: pics, setImage : setPics}}>
+        <ImageContext.Provider value={{images: pics, setImages : setPics}}>
                 { children}
         </ImageContext.Provider>
     ) 
