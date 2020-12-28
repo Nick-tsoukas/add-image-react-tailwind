@@ -20,7 +20,7 @@ const ImageGrid = (props) => {
             {
                 images.map((image, index) => {
                     return(
-                        <img src={image} />
+                        <img src={image} key={image} />
                     )
                 })
             }
