@@ -13,8 +13,6 @@ function App() {
     <ImageProvider>
       <div className="h-auto w-screen">
         <Header  />
-        <h1 style={{color: 'red'}}>hello world s</h1>
-        <h1 style={{color: 'red'}}>hello world s</h1>
         <ImageGrid />
         </div>
     </ImageProvider>
