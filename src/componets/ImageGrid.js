@@ -31,11 +31,12 @@ const ImageGrid = (props) => {
     },[]);
 
     return(
-        <div className="grid grid-cols-3 justify-items-center m-6 gap-10">
+        // <div className="grid grid-cols-3 justify-items-center m-6 gap-10">
+        <div className="image_container">
             {
                 images.map((image, index) => {
                     return(
-                        <img src={image.img} key={index} />
+                        <img className="image" src={image.img} key={index} />
                     )
                 })
             }

@@ -14,3 +14,15 @@
     padding: .6em;
     border-radius: 10%;
 }
+
+
+.image_container {
+	columns: 250px;
+    column-gap: 20px; 
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.image {
+	break-inside: avoid-column;
+	margin: 1rem; 
+}
