@@ -28,15 +28,15 @@ const ImageGrid = (props) => {
     },[]);
 
     return(
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 justify-items-center m-6 gap-4 bg-gray-900">
+        <div className="image_container">
             {
           images.map((image, index) => {
                   return (
-                    <div className="flex flex-col items-center justify-center border-gray-500 shadow-md border-2 rounded-md overflow-hidden h-full">
-                       <div className="w-full inline-block">
+                    // <div className="flex flex-col items-center justify-center border-gray-500 shadow-md border-2 rounded-md overflow-hidden h-full">
+                       <div className="image">
                          <img src={image.img} key={index} className="" />
                        </div>
-                    </div>
+                    // </div>
                     )
                 })
             }
