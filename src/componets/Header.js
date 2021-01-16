@@ -1,30 +1,25 @@
-import { Component, useContext, useState } from 'react';
+// import { Component, useContext, useState } from 'react';
 import '../index.css';
 import '../App.css'
-import ImageContext from '../context/imageContext';
-import back  from '../freckles.jpeg'
-const Header = (props) => {
-    const [image, setPic ] = useState('');
-    const { setImage } = useContext(ImageContext);
-    const handleSubmit = (evt) => {
-        evt.preventDefault();
-        setImage((preState => [...preState, image]));
-        setPic('')
-    }
-    return(
-        <div style={{backgroundImage: `url(${back})`}} className="flex h-96 header justify-center items-center">
+// import ImageContext from '../context/imageContext';
+const back  = '../freckles.jpeg'
+// import back  from '../freckles.jpeg'
+const backgroundStyles = {  
+    // backgroundRepeat: 'no-repeat',
+    // backgroundSize: 'cover',
+    // backgroundPosition: '50% 50%',
+    // bach
+    // backgroundPosition: 'center' 
+}
+
+const Header = () => {
     
-        <form onSubmit={handleSubmit}>
-            <input 
-            type="text"
-            value={image}
-            onChange={e => setPic(e.target.value)}
-            className="w-96 h-12 bg-white rounded-lg p-2" 
-            placeholder="Add Picture" 
-            />
-             <input className="button" type="submit" value="Submit" />
-        </form>
+    return(
+        <div>
+            <div style={{backgroundImage: `url(${back})`, ...backgroundStyles}} className="overflow-hidden bg-center bg-cover bg-no-repeat h-96 w-full">
+            </div>
         </div>
+            
     )
 }
 
