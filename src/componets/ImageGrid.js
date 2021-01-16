@@ -23,20 +23,24 @@ const ImageGrid = (props) => {
           }
           
           getRedheads()
+            // .then(redheads => {console.log(redheads)});
             .then((redheads) => setImages((previousState) => [...redheads]));
-  
+      
+            // Add the empty array as a second arg to only run once or else it will always run on any rerender 
     },[]);
-
+    
+    const imgContainerStyle = {columns: '320px'}
+    const imgWrapperStyle = {breakInside: 'avoid-column'}
     return(
-        <div className="image_container">
+        // image masonry container
+        <div className="w-screen py-10 md:px-8 lg:px-32 bg-black overflow-hidden" style={imgContainerStyle}>
             {
           images.map((image, index) => {
                   return (
-                    // <div className="flex flex-col items-center justify-center border-gray-500 shadow-md border-2 rounded-md overflow-hidden h-full">
-                       <div className="image">
-                         <img src={image.img} key={index} className="" />
-                       </div>
-                    // </div>
+                      //  image wrapper
+                       <div className="py-2" style={imgWrapperStyle}>
+                         <img src={image.img} key={image.img} className="rounded-xl mx-auto " />
+                      </div>
                     )
                 })
             }
